@@ -1,0 +1,33 @@
+$paddingItems: 6px;
+$primaryColor: #6c9bff;
+
+.section__todo {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo__container input {
+  flex: 1 0 0;
+  border-radius: 6px 0 0 6px;
+  border:none;
+  padding: $paddingItems;
+}
+
+.todo__container button {
+  flex: 0 0 100px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  background: $primaryColor;
+  padding: $paddingItems;
+  border-radius: 0px 6px 6px 0px;
+}

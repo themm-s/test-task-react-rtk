@@ -1,0 +1,88 @@
+.completed {
+  background-color: rgba(0, 255, 0, 0.5);
+
+  .button__complete {
+    &:hover {
+      background: rgba(255, 0, 0, 0.7) !important;
+    }
+  }
+  .todo__info {
+    text-decoration: line-through;
+  }
+}
+
+.todo__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  will-change: transform;
+  animation: mounted .5s ease-in-out;
+
+  .container__button {
+    display: flex;
+    gap: 4px;
+  }
+
+  .todo__date {
+    color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+  }
+
+  .button__trash, .button__complete {
+    user-select: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background .3s;
+
+    img {
+      height: 100%;
+      transition: all .3s;
+    }
+
+    &:hover {
+      background: rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  .button__complete {
+    background: transparent;;
+    
+    &:hover {
+      background: rgba(0, 255, 0, 0.5);
+    }
+  }
+
+  .todo__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+
+    p {
+      width: 10vw;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes mounted {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
