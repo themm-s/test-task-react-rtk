@@ -21,7 +21,7 @@ export const TodoList = () => {
   return tasks?.length > 0 ? (
     <ul className={style.todo__list}>
       {sortedTasks.map((task) => (
-        <TodoItem task={task} />
+        <TodoItem key={task.id} task={task} />
       ))}
     </ul>
   ) : (
